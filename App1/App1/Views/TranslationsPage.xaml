@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Arduino.Views.TranslationsPage"
+             BindingContext="{Binding Main,Source={StaticResource Locator}}"
+             Icon="ic_action_translate"
+             Title="TranslationsPage">
+    <ContentPage.Content>
+        <StackLayout
+            BindingContext="{Binding ArduinoModel}"
+            Padding="5">
+            <Label
+                FontAttributes="Bold"
+                FontSize="Large"
+                HorizontalOptions="Center"
+                Text="{Binding ArduinoModel.Name}"
+                TextColor="Black">
+            </Label>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    FontAttributes="Bold"
+                    Text="Germany"
+                    TextColor="Black">
+                </Label>
+                <Label
+                    Grid.Column="1"
+                    Grid.Row="0"
+                    FontAttributes="Bold"
+                    Text="{Binding ArduinoModel.Translations.Germany}"
+                    TextColor="Black">
+                </Label>
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="1"
+                    FontAttributes="Bold"
+                    Text="Spanish"
+                    TextColor="Black">
+                </Label>
+                <Label
+                    Grid.Column="1"
+                    Grid.Row="1"
+                    FontAttributes="Bold"
+                    Text="{Binding ArduinoModel.Translations.Spanish}"
+                    TextColor="Black">
+                </Label>
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="2"
+                    FontAttributes="Bold"
+                    Text="French"
+                    TextColor="Black">
+                </Label>
+                <Label
+                    Grid.Column="1"
+                    Grid.Row="2"
+                    FontAttributes="Bold"
+                    Text="{Binding ArduinoModel.Translations.French}"
+                    TextColor="Black">
+                </Label>
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="3"
+                    FontAttributes="Bold"
+                    Text="Japanese"
+                    TextColor="Black">
+                </Label>
+                <Label
+                    Grid.Column="1"
+                    Grid.Row="3"
+                    FontAttributes="Bold"
+                    Text="{Binding ArduinoModel.Translations.Japanese}"
+                    TextColor="Black">
+                </Label>
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="4"
+                    FontAttributes="Bold"
+                    Text="Italian"
+                    TextColor="Black">
+                </Label>
+                <Label
+                    Grid.Column="1"
+                    Grid.Row="4"
+                    FontAttributes="Bold"
+                    Text="{Binding ArduinoModel.Translations.Italian}"
+                    TextColor="Black">
+                </Label>
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="5"
+                    FontAttributes="Bold"
+                    Text="Brazilian"
+                    TextColor="Black">
+                </Label>
+                <Label
+                    Grid.Column="1"
+                    Grid.Row="5"
+                    FontAttributes="Bold"
+                    Text="{Binding ArduinoModel.Translations.Brazilian}"
+                    TextColor="Black">
+                </Label>
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="6"
+                    FontAttributes="Bold"
+                    Text="Portuges"
+                    TextColor="Black">
+                </Label>
+                <Label
+                    Grid.Column="1"
+                    Grid.Row="6"
+                    FontAttributes="Bold"
+                    Text="{Binding ArduinoModel.Translations.Portuges}"
+                    TextColor="Black">
+                </Label>
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="7"
+                    FontAttributes="Bold"
+                    Text="Dutch"
+                    TextColor="Black">
+                </Label>
+                <Label
+                    Grid.Column="1"
+                    Grid.Row="7"
+                    FontAttributes="Bold"
+                    Text="{Binding ArduinoModel.Translations.Dutch}"
+                    TextColor="Black">
+                </Label>
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="8"
+                    FontAttributes="Bold"
+                    Text="Croatian"
+                    TextColor="Black">
+                </Label>
+                <Label
+                    Grid.Column="1"
+                    Grid.Row="8"
+                    FontAttributes="Bold"
+                    Text="{Binding ArduinoModel.Translations.Croatian}"
+                    TextColor="Black">
+                </Label>
+                <Label
+                    Grid.Column="0"
+                    Grid.Row="9"
+                    FontAttributes="Bold"
+                    Text="Persian"
+                    TextColor="Black">
+                </Label>
+                <Label
+                    Grid.Column="1"
+                    Grid.Row="9"
+                    FontAttributes="Bold"
+                    Text="{Binding ArduinoModel.Translations.Persian}"
+                    TextColor="Black">
+                </Label>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

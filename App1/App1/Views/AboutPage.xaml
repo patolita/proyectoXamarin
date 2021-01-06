@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
+             xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+             xmlns:local="clr-namespace:Arduino.ViewModels;assembly=Arduino.ViewModels"
+             x:Class="Arduino.Views.AboutPage"
+             BindingContext="{Binding Main,Source={StaticResource Locator}}" 
+             Title="About">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Icon="ic_more_vert"
+                     Command="{Binding ShareCommand}"/>
+    </ContentPage.ToolbarItems>
+    <DatePicker
+        x:Name="Datepicker"
+        Date="{Binding SelectedDate, Mode=TwoWay}"
+        IsEnabled="true"
+        IsVisible="false">
+    </DatePicker>
+    <SearchBar x:Name="searchBar"
+       Text=""
+       Placeholder="type something">
+        
+    </SearchBar>
+    <ContentPage.Content>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <ScrollView Grid.Column="0">
+                <StackLayout>
+                    <Entry Placeholder="enter job title">
+                        <Entry.Triggers>
+                            <Trigger TargetType="Entry"
+                               Property="Entry.IsFocused" Value="True">
+                                <Trigger.EnterActions>
+                                    <local:FadeTriggerAction StartsFrom="0" />
+                                </Trigger.EnterActions>
+
+                                <Trigger.ExitActions>
+                                    <local:FadeTriggerAction StartsFrom="1" />
+                                </Trigger.ExitActions>
+                                <!-- You can use both Enter/Exit and Setter together if required -->
+                            </Trigger>
+                        </Entry.Triggers>
+                    </Entry>
+                    <Label 
+                        Grid.Column="0" 
+                        Grid.Row="0" 
+                        Text="helloo" 
+                        TextColor="Black" 
+                        VerticalOptions="Center"
+                        FontSize="Large">
+                    </Label>
+                    <BoxView BackgroundColor="Aqua"/>
+                    <Label 
+                        Grid.Column="1" 
+                        Grid.Row="0" 
+                        Text="helloo" 
+                        TextColor="Black" 
+                        VerticalOptions="Center"
+                        FontSize="Large">
+                    </Label>
+                    <BoxView BackgroundColor="Aqua"/>
+                    <Label 
+                        Grid.Column="0" 
+                        Grid.Row="1" 
+                        Text="helloo" 
+                        TextColor="Black" 
+                        VerticalOptions="Center"
+                        FontSize="Large">
+                    </Label>
+                    <BoxView BackgroundColor="Aqua"/>
+                    <Label 
+                        Grid.Column="0" 
+                        Grid.Row="0" 
+                        Text="helloo" 
+                        TextColor="Black" 
+                        VerticalOptions="Center"
+                        FontSize="Large">
+                    </Label>
+                    <BoxView BackgroundColor="Aqua"/>
+                    <Label 
+                        Grid.Column="0" 
+                        Grid.Row="0" 
+                        Text="helloo" 
+                        TextColor="Black" 
+                        VerticalOptions="Center"
+                        FontSize="Large">
+                    </Label>
+                    <BoxView BackgroundColor="Aqua"/>
+                    <Label 
+                        Grid.Column="0" 
+                        Grid.Row="0" 
+                        Text="helloo" 
+                        TextColor="Black" 
+                        VerticalOptions="Center"
+                        FontSize="Large">
+                    </Label>
+                </StackLayout>
+            </ScrollView>
+            <ScrollView Grid.Column="1">
+                <StackLayout>
+                    <Label 
+                        Grid.Column="0" 
+                        Grid.Row="0" 
+                        Text="helloo" 
+                        TextColor="Black" 
+                        VerticalOptions="Center"
+                        FontSize="Large">
+                    </Label>
+                    <BoxView BackgroundColor="Aqua"/>
+                    <Label 
+                        Grid.Column="1" 
+                        Grid.Row="0" 
+                        Text="helloo" 
+                        TextColor="Black" 
+                        VerticalOptions="Center"
+                        FontSize="Large">
+                    </Label>
+                    <BoxView BackgroundColor="Aqua"/>
+                    <Label 
+                        Grid.Column="0" 
+                        Grid.Row="1" 
+                        Text="helloo" 
+                        TextColor="Black" 
+                        VerticalOptions="Center"
+                        FontSize="Large">
+                    </Label>
+                    <BoxView BackgroundColor="Aqua"/>
+
+                </StackLayout>
+
+            </ScrollView>
+        </Grid>
+     </ContentPage.Content>
+</ContentPage>
